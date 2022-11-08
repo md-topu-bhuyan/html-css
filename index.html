@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <table>
+        <tr>
+            <th>Enter Height</th>
+            <td><input type="number" id="height"/></td>
+        </tr>
+        <tr>
+            <th>Enter Width </th>
+            <td><input type="number" id="width"/></td>
+        </tr>
+        <tr>
+            <th>Background Color</th>
+            <td><input type="color" id="color"/></td>
+        </tr>
+        <th>Enter Position</th>
+            <td>
+                <select id="position">
+                    <option value="relatiive">Relaetive</option>
+                    <option value="absolute">Absolite</option>
+                    <option value="fixed">Fixed</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <th> Right</th>
+            <td><input type="number" id="right"/></td>
+        </tr>
+        <tr>
+            <th>Enter Height</th>
+            <td><input type="button" id="btn" value="Submit"/></td>
+        </tr>
+    </table>
+    <hr/>
+    <h3>Your Element Is</h3>
+    <div id="div"></div>
+
+       
+    <script src="js/script.js"></script>
+
+    <script>
+
+ var btn = document.getElementById('btn');
+ btn.onclick = function ()
+ {
+     var height = document.getElementById('height').value;
+     var width = document.getElementById('width').value;
+     var BackgroundColor = document.getElementById('color').value;
+     var position = document.getElementById('position').value;
+     var right = document.getElementById('right').value;
+     var div = document.getElementById('div');
+    
+     div.style.height = height+ 'px';
+     div.style.width = width+ 'px';
+     div.style.backgroundColor = 'backgroundcolor';
+     div.style.position = 'position';
+     div.style.right = right+'px';
+ };
+ var person = {
+            'name':'habib',
+            'city':'dhaka',
+            'email':'habib@gmail.com',
+            one:function()
+            {
+                document.write('hello world');
+            },
+
+               two: function(x,y)
+
+               {
+                   var z = Number(x) + Number(y);
+                   return z;
+               }        
+        };
+           document.write(person.two(10,20));
+
+    </script>
+</body>
+</html>
